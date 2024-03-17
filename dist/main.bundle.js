@@ -1,0 +1,1 @@
+(()=>{const e=new class{constructor(e,l){this.fName=e,this.lName=l}get fullName(){return`${this.fName} ${this.lName}`}set fullName(e){e=e.split(" "),this.fName=e[0],this.lName=e[1]}}("Al Amin","Khan");console.log(e.fullName),document.getElementsByTagName("h1")[0].innerText=e.fullName})();
