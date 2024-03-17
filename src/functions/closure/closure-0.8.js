@@ -1,43 +1,34 @@
 /* ***************************************
- *************** Closure setp 1 ***********
+ *************** Closure 1 ***********
  ******************************************/
-const processFetchedData = () => {
-  // "myData" is from "processFetchedData()" parent function, but it doesn't have access to it.
-  const myData = "Here is my data";
-  // We will return "myData" inside the child function "handleData()"
-  // In another word "handleData()" will have a backpack that contain value of "myData" which is a closure
-  const handleData = () => {
-    // As we returned it in here the value of "myData" is inside this function backpack.
-    return myData;
+const processFetchedData1 = (url) => {
+  // create a function that acts like a closure
+  const handleData1 = (theURL) => {
+    theURL = url;
+    return theURL;
   };
-  return handleData;
+  return handleData1;
 };
-
-const handleData = processFetchedData();
-console.log(handleData());
+const handleData1Func = processFetchedData1("I am the URL");
+console.log(handleData1Func()); // Result: I am the URL
 
 /* ***************************************
- *************** Closure setp 2 ***********
+ *************** Closure 2 ***********
  ******************************************/
-const processFetchedData2 = (url) => {
-  const handleData2 = () => {
-    return url;
-  };
-  return handleData2;
+const processData2 = (callback) => {
+  return callback();
 };
-console.log(processFetchedData2("I am the URL")); // Result: () => { return url; }
-const handleData2 = processFetchedData2("I am the URL");
-console.log(handleData2()); // result: I am the URL
-
+const processFetchedData2 = () => {
+  // create a function "handleData2" that acts like a closure
+  const handleData2 = (theURL) => {
+    return theURL;
+  };
+  // We could have returned the function handleData2 here;
+  // But we will return it as a callback in another function called "processData2"
+  processData2(handleData2);
+};
+const handleData2Func = processFetchedData2();
+console.log(handleData2Func("I am the URL")); // Result: I am the URL
 /* ***************************************
- *************** Closure setp 3 ***********
+ *************** Closure 3 ***********
  ******************************************/
-const processFetchedData3 = (url) => {
-  const handleData3 = () => {
-    return url;
-  };
-  fetchData(handleData3); // return in another function
-};
-const fetchData = (callback) => {
-  return callback("I am the URL");
-};
