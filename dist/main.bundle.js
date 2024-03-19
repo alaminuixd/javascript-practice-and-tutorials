@@ -1,1 +1,1 @@
-(()=>{const e=new class{constructor(e,l){this.fName=e,this.lName=l}get fullName(){return`${this.fName} ${this.lName}`}set fullName(e){e=e.split(" "),this.fName=e[0],this.lName=e[1]}}("Al Amin","Khan");console.log(e.fullName),document.getElementsByTagName("h1")[0].innerText=e.fullName})();
+(()=>{const e=((e,o,l)=>{for(let n=0;n<e.length;n++)l=o(l,e[n]);return l})(["a","b","c","d","e"],((e,o)=>e+o),"");console.log(e)})();
