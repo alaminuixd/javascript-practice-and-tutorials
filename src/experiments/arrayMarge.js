@@ -42,12 +42,51 @@ const array2 = [
   { id: 2, age: 30 },
   { id: 3, name: "Bob" },
 ];
+
 function mergeArrayOfObjects(arrObj1, arrObj2) {
-  let merged = [...arrObj1];
+  let merged = [...arrObj1]; // make a new array from "arrObj1"
   for (let i = 0; i < arrObj2.length; i++) {
-    if (!merged.includes(arrObj2.id.val)) {
-      merged.push(arrObj2.id.val);
+    let found = false;
+    // loop through "marged" to check if has any id === arrObj2 id
+    for (let j = 0; j > merged.length; j++) {
+      if (merged[j].id === arrObj2[i].id) {
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      merged.push(arrObj2[i].id);
     }
   }
   return merged;
 }
+const mergedObj1 = mergeArrayOfObjects(array1, array2);
+console.log(mergedObj1);
+
+/* function mergeArrayOfObjects(arrObj1, arrObj2) {
+  let merged = [...arrObj1];
+
+  for (let i = 0; i < arrObj2.length; i++) {
+    let found = false;
+
+    // Check if the id already exists in merged
+    for (let j = 0; j < merged.length; j++) {
+      if (arrObj2[i].id === merged[j].id) {
+        found = true;
+        // if found the same id in "marged" don't push it in "marge" from "arrObj2"
+        break; // exit inner loop if id already exists
+      }
+    }
+
+    // If id not found, add the object from arrObj2 to merged
+    if (!found) {
+      merged.push(arrObj2[i]);
+    }
+  }
+
+  return merged;
+}
+
+const merged4 = mergeArrayOfObjects(array1, array2);
+console.log(merged4); */
