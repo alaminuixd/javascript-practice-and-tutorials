@@ -16,10 +16,10 @@ console.log(textArr);
 Array.indexOf(arrayItem) search for an array's item position. If 1st one position is found it ignor others.
 
 let txt = "abacba"
-txt.indexOf(a); | result = 0
+txt.indexOf(a); is = 0
 we have 3 "a" here and it will only get the first "a" index positon and ignor the others postion
 
-txt.indexOf(b); | result = 1
+txt.indexOf(b); is = 1
 we have 2 "b" here and it will only get the first "b" index positon and ignor the others postion
 */
 

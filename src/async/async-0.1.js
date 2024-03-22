@@ -1,28 +1,11 @@
-async function one() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log("one");
-      resolve();
-    }, 1000);
-  });
+import * as async1 from "./mods/async-0.1.js";
+async function executeAsync(counter = 0) {
+  if (counter > 5) return;
+  await async1
+    .one()
+    .then(() => async1.two())
+    .then(() => async1.three());
+  counter++;
+  executeAsync(counter);
 }
-async function two() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log("two");
-      resolve();
-    }, 1000);
-  });
-}
-async function three() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log("three");
-      resolve();
-    }, 1000);
-  });
-}
-
-await one()
-  .then(() => two())
-  .then(() => three());
+executeAsync(1);

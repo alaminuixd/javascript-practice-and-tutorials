@@ -2,6 +2,7 @@ let mainPath = "src/experiments/itemRemover.js";
 const names = ["sina", "Sam", "Qoli", "Ben", "Zod", "Quantin", "Ala"];
 const rmQName = names.filter((item) => item[0] !== "Q");
 console.log(rmQName);
+// result: ["sina", "Sam", "Ben", "Zod", "Ala"];
 
 function myFilter(arr, callback) {
   const filtered = [];
