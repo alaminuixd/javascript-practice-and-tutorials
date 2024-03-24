@@ -1,6 +1,17 @@
 // Function to filter array elements based on a callback function
 function filterByIndex(arr, callback) {
   const filtered = [];
+  if (!Array.isArray(arr)) {
+    throw new Error("The first argument must be an array.");
+  }
+  if (typeof filterFunc !== "function") {
+    throw new Error("The second argument must be a function.");
+  }
+  if (typeof chr !== "string" || chr.length !== 1) {
+    throw new Error("The third argument must be a single character string.");
+  }
+
+  // Loop through all array items
   for (let i = 0; i < arr.length; i++) {
     // ( arr[i] OR each "item" ) need to pass test in "callback"
     if (callback(arr[i])) {
