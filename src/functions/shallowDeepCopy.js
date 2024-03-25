@@ -27,7 +27,7 @@ console.log(y); // result 3
 // In Structural data types changing values in the children do change their parent's values.
 const arr1 = [1, 2, 3, 4, 5, 6];
 const arr2 = arr1;
-arr1.join(", "); // result 1, 2, 3, 4, 5 6 | Note: I used join() method to print the array values
+arr1.join(", "); // result 1, 2, 3, 4, 5 6 | The join() method turns an Array to a single string
 arr2.join(", "); // result 1, 2, 3, 4, 5 6
 // Now if i add or change values in any of them, it will take effect in both of them
 arr2[2] = 20; // pushed 20 in the place of 2
