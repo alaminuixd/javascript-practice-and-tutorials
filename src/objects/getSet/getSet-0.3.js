@@ -15,6 +15,7 @@ class Person {
   set fullName(val) {
     const nameParts = val.split(" ");
     this.fName = nameParts[0];
+    this.lName = nameParts.slice(1).join(" ");
     /* 
     The "slice" method in JavaScript doesn't include the element at the ending index.
     NameParts.slice(1) would include all elements starting from index 1 (inclusive) to the end of the array. 
@@ -23,7 +24,6 @@ class Person {
     Then, the .join(" ") method will join all elements from index 1 (resulting from .slice(1)) of the array
     into a single string, with each element separated by the specified separator, in this case, the space: " ".
 */
-    this.lName = nameParts.slice(1).join(" ");
   }
 }
 const p1 = new Person("Al Amin", "Khan");

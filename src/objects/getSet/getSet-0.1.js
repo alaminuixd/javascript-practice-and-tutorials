@@ -1,10 +1,10 @@
 /* 
-JavaScript consists of two property types:
+JavaScript "Objects" consist of two property types:
 1) data properties
 2) accessor properties
 */
 
-// 1)ata properties are properties that associate "data" with an "object".
+// 1) data properties are properties that associate "data" with an "object".
 const person = {
   // Data property
   greeting: "",

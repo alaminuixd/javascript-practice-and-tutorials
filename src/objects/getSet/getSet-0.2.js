@@ -20,7 +20,7 @@ console.log(person2.fullName());
 This approach is read only. 
 Which means we can't set a person full name from out side.
 Everytime we have to print the same name.
-It would be better if we can treat this as a property rather than a method like so:
+It would be better if we could treat this as a property rather than a method like so:
 console.log(person2.fullName);
 
 This is where "GETTER" and "SETTER" comes to the picture:
@@ -56,7 +56,7 @@ const person4 = {
 // This will print the default name "Sultana Khanom"
 console.log(person4.fullName);
 // Let set a different name using "SETTER" fullName(val){...}
-// This name "Abrar Syed" is setted as permanent
+// This name "Abrar Syed" is setted as default untill we add new property.
 person4.fullName = "Abrar Syed";
 const newName = person4.fullName;
 console.log(newName);
@@ -83,8 +83,8 @@ console.log("Hello there:", person5.fullName);
 console.log((person5.fullName = "Abrar Syed"));
 const anotherName = (person5.fullName = "Subrina Akhter");
 console.log(anotherName);
-// Very important**************
-// This is still "Sultana Khanom" as we have only returned the val;
+//* Very important**************
+// This is still "Sultana Khanom" as we have only returned the val and did not assign the setter value to the properties "fName" and "lName".
 console.log("Hello there:", person5.fullName, " I am not changed.");
 
 /* 
@@ -103,10 +103,11 @@ const person6 = {
   set fullName(val) {
     val = val.split(" ");
     this.fName = val[0];
-    this.lName = val[1];
+    this.lName = val.slice(1).join(" ");
   },
 };
 
 console.log(person6.printName()); // result: "Al Amin Khan"
 person6.fullName = "Abrar Syed"; // change "fullName" setter to "Abrar Syed"
 console.log(person6.printName()); // result: Abrar Syed
+// This is because we assigning the "setter" value to "fName" and "lName";
