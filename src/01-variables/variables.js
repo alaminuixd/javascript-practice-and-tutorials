@@ -52,4 +52,4 @@ let $price = 20;
 /*
     4) Unicode Characters: JavaScript allows the use of Unicode characters in variable names, but it's generally recommended to stick to ASCII characters for compatibility and readability. 
 */
-let café = "Coffee";
+let café = "Coffee"; // "é" is an Unicode character.
