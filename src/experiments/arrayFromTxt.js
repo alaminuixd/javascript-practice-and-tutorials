@@ -40,3 +40,7 @@ for (let i = 0; i < txt.length; i++) {
 for (let val of mySet) {
   console.log(val);
 }
+
+const myTxt = "some example text with numbers 250 450 680";
+const txtArr = myTxt.split("").filter((char) => char.trim());
+console.log(txtArr);
