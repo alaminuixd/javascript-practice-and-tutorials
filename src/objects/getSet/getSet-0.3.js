@@ -19,7 +19,7 @@ class Person {
     /* 
     The "slice" method in JavaScript doesn't include the element at the ending index.
     NameParts.slice(1) would include all elements starting from index 1 (inclusive) to the end of the array. 
-    So, nameParts.slice(1) would include "Syed" and "Khan", as well as any other elements at index 1 or beyond.
+    So, nameParts.slice(1) would include "Syed" and "Khan", as well as any other elements at index 1 or beyond and omit the part "Abrar".
 
     Then, the .join(" ") method will join all elements from index 1 (resulting from .slice(1)) of the array
     into a single string, with each element separated by the specified separator, in this case, the space: " ".
