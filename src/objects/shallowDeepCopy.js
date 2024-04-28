@@ -39,7 +39,7 @@ arr2.join(", "); // result 1, 20, 3, 4, 5 6
 // Primitives are immutable.
 // Changing value and mutation are not the same.
 let pName = "David Rogar";
-// We can access any character of a string using array-like indexing.
+// We can access any character of a "string" using array-like indexing.
 console.log(pName[0]); // result: "D"
 console.log(pName.split("").join(", ")); // result: D, a, v, i, d,  , R, o, g, a, r
 pName[0] = "M"; // This wouldn't work because strings are immutable.
@@ -67,7 +67,7 @@ const scoreArray = [10, 20, 30, 40, 50, 60];
 console.log(addToScoreHistory(scoreArray, 70));
 // This mutates / change the original array
 // This is considered to be a side effect.
-// There are much more to learn in pur functions.
+// There are much more to learn about pur functions.
 
 // Now we need to modify our function so it doesn't mutate/ change our original array data.
 
