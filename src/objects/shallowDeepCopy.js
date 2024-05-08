@@ -112,7 +112,7 @@ console.log(mainArray5); // result: [1, 2, 3, 4]
 console.log(shallowArray5); // result: [1, 2, 3, 4, 5]
 
 // Shallow copy will take effect in both array's nested array
-const mainArray6 = [1, 2, 3, 4, [5, 6], 7]; // [5, 6] nested array here
+const mainArray6 = [1, 2, 3, 4, [5, 6], 7]; // [5, 6] is nested array here
 const shallowArray6 = [...mainArray6]; // shallowArray6 is [1, 2, 3, 4, [5, 6], 7]
 // Add new value to shallowArray6 regular Array
 shallowArray6.push(8);
