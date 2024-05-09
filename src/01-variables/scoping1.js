@@ -7,7 +7,7 @@ console.log(this.a); // result: 10
 let b = 20;
 // typical console
 console.log(b); // result: 20
-// The "b" using "let" is not a property of the global object.
+// The "b" using "let" is not a property of the global "window" object.
 console.log(this.b); // result: undefined
 
 /************************************************
