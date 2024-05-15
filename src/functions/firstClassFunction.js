@@ -95,6 +95,7 @@ const funcObj = {};
 funcObj.add3 = add; // function add() will be added to add3
 funcObj.add3 = add; // function sub() will be added to sub3
 funcObj.sub3 = sub;
+
 console.log(funcObj.add3); // result: (a, b) => { return a + b; };
 console.log(funcObj.sub3); // result: (a, b) => { return a - b; };
 console.log(funcObj.add3(20, 10)); // result: 30
