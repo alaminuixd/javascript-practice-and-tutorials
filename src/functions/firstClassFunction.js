@@ -1,6 +1,6 @@
 /* 
 First Class Function:
-    In JavaScript, a "first-class function" means that functions are treated just like any other value. This means you can assign functions to variables, pass them as arguments to other functions, and even return them from other functions.
+    In JavaScript, a "first-class function" means that functions are treated just like any other value. This means, you can assign functions to variables, pass them as arguments to other functions, and even return them from other functions.
 
 A short list of what a first-class function includes in JavaScript:
     1) Assigning functions to variables.
@@ -75,6 +75,16 @@ console.log(funcArray[0]); // result: (a, b) => { return a + b; };
 console.log(funcArray[1]); // result: (a, b) => { return a - b; };
 console.log(funcArray[0](20, 10)); // result: 30
 console.log(funcArray[1](20, 10)); // result: 10
+// Another example
+const mathArr = [add, sub]; // array contains 2 functions
+
+for (let i = 0; i < mathArr.length; i++) {
+  if (i === 0) {
+    console.log("The addition is " + mathArr[i](20, 5));
+  } else {
+    console.log("The subtraction is " + mathArr[i](50, 20));
+  }
+}
 /***************** Important ***********************/
 const [add2, sub2] = funcArray; // destructuring
 add2(20, 10); // result: 30
