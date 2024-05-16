@@ -14,12 +14,15 @@ const person = {
 const person2 = {
   // Data property
   greeting: "",
-  // "set" is accessor property
-  set firstName(value) {
-    this.greeting = value + " is my first name.";
-  },
   // "get" is also accessor property
   get firstName() {
     return this.greeting + "and don't call me.";
   },
+  // "set" is accessor property
+  set firstName(value) {
+    this.greeting = value + " is my first name.";
+  },
 };
+
+person2.firstName = "Al Amin";
+console.log(person2.firstName); // result: Al Amin is my first name. and don't call me.
