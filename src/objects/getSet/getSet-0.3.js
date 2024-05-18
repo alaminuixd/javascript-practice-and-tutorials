@@ -4,6 +4,7 @@ const createH1 = (elemParent, elemClass, elemId) => {
   h1.setAttribute("class", elemClass);
   return elemParent.appendChild(h1);
 };
+
 class Person {
   constructor(fName, lName) {
     this.fName = fName;
