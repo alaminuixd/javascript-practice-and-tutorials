@@ -19,5 +19,4 @@ loop 2:
     result (1) is positive so "b/2" will come first:
     sequence: 1, 2, 3
 As there are no more pairs, the result will be: 1, 2, 3
-This is how it works
 */

@@ -1,4 +1,5 @@
 import * as async1 from "./mods/async-0.1.js";
+// a recursive async function
 async function executeAsync(counter = 0) {
   if (counter > 5) return;
   await async1
