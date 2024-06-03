@@ -8,7 +8,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    main: "./src/async/async-0.1.js", // Main entry point for JavaScript
+    main: "./src/async/ajax-with-cb/ajax-with-callback.js", // Main entry point for JavaScript
     style: "./src/style.css", // Entry point for CSS
   },
   output: {

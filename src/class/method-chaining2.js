@@ -29,7 +29,14 @@ const p1 = new Person("Al Amin", 28);
     if we call p1.printName();
     then call "theMessages()" it will only print "message" inside "printName()" method. 
 */
-p1.printName().congrate();
+console.log(p1.getMessages()); // this will print an empty "Array"
+// But
+p1.printName(); // if we do this
+p1.getMessages(); // This will print an Array of single item from "printName()"
+
+// But
+p1.printName().congrate(); // if we do this
+p1.getMessages(); // this will print an Array of two items from "printName()" and "contrate()"
 
 const theMessage = p1.getMessages();
 theMessage.forEach((message) => console.log(message));

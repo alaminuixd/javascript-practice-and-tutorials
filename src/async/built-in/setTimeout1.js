@@ -11,4 +11,4 @@ function handleTimeout() {
   console.log("Time is out!");
 }
 setTimeout(handleTimeout, 3000);
-// result: print after 3 seconds "Tim is out!"
+// result: print after 3 seconds "Time is out!"
