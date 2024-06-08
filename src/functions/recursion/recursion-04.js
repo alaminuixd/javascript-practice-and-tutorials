@@ -1,3 +1,4 @@
+// Merge using "Loop", "recursive function" and "Array.concat"
 const r = [10, 3, 9, [6, 8], 1, 4, [5, 7, [2, 12], 11]];
 function mergeArr(arr) {
   let flatenArray = [];
@@ -15,3 +16,25 @@ function mergeArr(arr) {
 
 const res = mergeArr(r).sort((a, b) => a - b);
 console.log(res);
+
+//Merge using "Loop", "recursive function" and "Array.concat"
+const r2 = [10, 3, 9, [6, 8], 1, 4, [5, 7, [2, 12], 11]];
+
+function flattenArrayIterative(arr) {
+  let stack = [...arr];
+  let flatArray = [];
+
+  while (stack.length) {
+    const next = stack.pop();
+    if (Array.isArray(next)) {
+      stack.push(...next);
+    } else {
+      flatArray.push(next);
+    }
+  }
+
+  return flatArray.reverse();
+}
+
+const flattenedArray = flattenArrayIterative(r2);
+console.log(flattenedArray);
