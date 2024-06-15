@@ -1,3 +1,6 @@
+/* 
+Array.filter  method creates a new array filled with elements that pass a test provided by a callback function.
+*/
 const names = ["sina", "Sam", "Qoli", "Ben", "Zod", "Quantin", "Ala"];
 function filterArrayByFirstChar(arr, predicate) {
   const filteredArr = [];
