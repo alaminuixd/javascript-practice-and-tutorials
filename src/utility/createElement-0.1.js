@@ -1,3 +1,5 @@
+// Uses of Factory functions
+// A factory function is a function that returns an object
 function elementFactory(elmName, parent) {
   const elm = document.createElement(elmName);
   parent.appendChild(elm);
