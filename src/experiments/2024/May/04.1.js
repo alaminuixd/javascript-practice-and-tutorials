@@ -1,8 +1,8 @@
 // one parameter in callback
-function greetCustomer(cb, fName, lName, salu) {
+function greetCustomer(cb, fName, lName, greet) {
   // `${fName} ${lName}` in cb() in one parameter
   const fullName = cb(`${fName} ${lName}`);
-  let details = `${fullName} ${salu}`;
+  let details = `${fullName} ${greet}`;
   return details;
 }
 function cbF(message) {
@@ -12,10 +12,10 @@ function cbF(message) {
 console.log(greetCustomer(cbF, "Al Almin", "Khan", "Welcome"));
 
 // multi paramenter in callback
-function greetCustomer2(cb, fName, lName, salu) {
+function greetCustomer2(cb, fName, lName, greet) {
   // fName, lName in cb() in two parameters
   const fullName = cb(fName, lName);
-  let details = `${fullName} ${salu}`;
+  let details = `${fullName} ${greet}`;
   return details;
 }
 function cbF2(fName, lName) {

@@ -14,4 +14,4 @@ const person = {
   },
 };
 
-person.details();
+console.log(person.details());

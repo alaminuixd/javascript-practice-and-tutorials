@@ -1,5 +1,6 @@
 const loadingElm = document.getElementById("loadingElm");
 const usersName = document.getElementById("users");
+
 function xhrRequest(url, callback, loadElm) {
   const xhr = new XMLHttpRequest();
   let loading = "";
@@ -7,7 +8,7 @@ function xhrRequest(url, callback, loadElm) {
   xhr.onloadstart = () => {
     loading = "Loading...";
     if (loading !== null) {
-      loadElm.innerText = loading;
+      loadElm ? (loadElm.innerText = loading) : null;
     }
   };
   xhr.onreadystatechange = (e) => {
@@ -23,12 +24,14 @@ function xhrRequest(url, callback, loadElm) {
   xhr.send();
 }
 
-xhrRequest("https://jsonplaceholder.typicode.com/users", (res, err) => {
-  if (res) {
-    res.map((item) => {
-      usersName.innerHTML = "<li>" + item.name + "</li>";
-    });
-  } else {
-    console.log(err);
-  }
-});
+xhrRequest(
+  "https://jsonplaceholder.typicode.com/users",
+  (res, err) => {
+    if (res) {
+      console.log(res);
+    } else {
+      console.log(err);
+    }
+  },
+  loadingElm
+);
