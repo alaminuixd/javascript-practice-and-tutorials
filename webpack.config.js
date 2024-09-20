@@ -8,8 +8,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    main: "./src/debuging/debuging-01.js", // Main entry point for JavaScript
-    style: "./src/style.css", // Entry point for CSS
+    main: "./src/objects/date/digitalClock.js", // Main entry point for JavaScript
+    style: "./src/objects/date/digitalClock.css", // Entry point for CSS || old: ./src/style.css
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -38,7 +38,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "./src/index.html",
+      template: "./src/objects/date/index.html", // ./src/index.html
     }),
   ],
   optimization: {
@@ -48,6 +48,9 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
+    },
+    client: {
+      logging: "none",
     },
     compress: true,
     port: 3003,
