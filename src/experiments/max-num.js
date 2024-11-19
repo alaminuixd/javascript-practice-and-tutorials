@@ -1,3 +1,4 @@
+// Take out the maximum number from the parameter value wheather it's an array or numbers
 function test(...nums) {
   let max = -Infinity;
   if (Array.isArray(nums[0])) {
