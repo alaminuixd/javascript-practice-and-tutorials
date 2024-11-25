@@ -17,3 +17,22 @@ const groupedItems = items.reduce((accu, item, index) => {
 }, {});
 
 console.log(groupedItems);
+
+// Breaking down the above
+const obj = {}; // Create an empty object
+const fruits = "fruits"; // Define the key 'fruits'
+const vegetables = "vegetables"; // Define the key 'vegetables'
+
+// Dynamically create objects for fruits and vegetables with properties like 'one', 'two'
+obj[fruits] = {};
+obj[vegetables] = {};
+
+// Add items to the fruits object with keys 'one', 'two'
+obj[fruits].one = "mango";
+obj[fruits].two = "banana";
+
+// Add items to the vegetables object with keys 'one', 'two'
+obj[vegetables].one = "radish";
+obj[vegetables].two = "guard";
+
+console.log(obj);
