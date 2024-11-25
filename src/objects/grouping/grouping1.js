@@ -15,3 +15,17 @@ const groupedItems = items.reduce((accu, item) => {
 }, {});
 
 groupedItems;
+
+// Broken version
+const catFruit = "Fruits";
+const catVegetable = "Vegetable";
+const accu = {};
+if (!accu[catFruit]) {
+  accu[catFruit] = [];
+}
+if (!accu[catVegetable]) {
+  accu[catVegetable] = [];
+}
+accu[catFruit].push("Apple", "Mango", "Grapes");
+accu[catVegetable].push("Carrot", "Broccoli", "Beans");
+console.log(accu);
