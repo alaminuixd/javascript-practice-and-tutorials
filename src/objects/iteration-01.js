@@ -20,7 +20,12 @@ for (let key in obj1) {
     }
   }
 }
-
+/* 
+Object.entries() returns an array of a given object's own enumerable property [key, value] pairs. Each pair is represented as a two-element array.
+ */
+const obj = { a: 1, b: 2, c: 3 };
+console.log(Object.entries(obj));
+// result: [ ['a', 1], ['b', 2], ['c', 3] ]
 const objArr = Object.entries(obj1);
 objArr.map((item) => {
   let key = item[0];
