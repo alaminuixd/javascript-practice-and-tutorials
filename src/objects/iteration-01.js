@@ -1,3 +1,4 @@
+// Print object's and nested object's values
 const obj1 = {
   name: "Al Amin Khan",
   father: "Syed Ahmed Khan",
