@@ -18,7 +18,7 @@ const person2 = {
 console.log(person2.fullName());
 /* 
 This approach is read only. 
-Which means we can't set a person full name from out side.
+Which means we can't set a person full name from outside.
 Everytime we have to print the same name.
 It would be better if we could treat this as a property rather than a method like so:
 console.log(person2.fullName);
@@ -47,7 +47,7 @@ const person4 = {
   },
   // val is an Array of our properties
   set fullName(val) {
-    // split (Array Method) will make a space between "fName" and "lName"
+    // split (Array Method) will make an array from given value with space between "fName" and "lName"
     const parts = val.split(" ");
     this.fName = parts[0];
     this.lName = parts[1];
