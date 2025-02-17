@@ -9,7 +9,7 @@ console.log(`${person.fName} ${person.lName}`);
 
 // A better approach is making a method inside the person object
 const person2 = {
-  fName: "Al Amin",
+  fName: "Md. Al Amin",
   lName: "Khan",
   fullName() {
     return `${this.fName} ${this.lName}`;
