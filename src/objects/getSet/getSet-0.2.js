@@ -86,15 +86,6 @@ console.log(anotherName);
 //* Very important**************
 // This is still "Sultana Khanom" as we have only returned the val and did not assign the setter value to the properties "fName" and "lName".
 console.log("Hello there:", person5.fullName, " I am not changed.");
-//* very important ****************
-// never name the property and getter/setter identical. It will make an infinite call stack.
-const personWrong = {
-  name: "Al Amin",
-  get name() {
-    return this.name;
-  },
-};
-personWrong.name;
 /* 
 We can even try using a different method in the object.
 But the change is permanent ******
@@ -119,3 +110,13 @@ console.log(person6.printName()); // result: "Al Amin Khan"
 person6.fullName = "Abrar Syed"; // change "fullName" setter to "Abrar Syed"
 console.log(person6.printName()); // result: Abrar Syed
 // This is because we assigning the "setter" value to "fName" and "lName";
+
+//* very important ****************
+// never name the property and getter/setter identical. It will make an infinite call stack.
+const personWrong = {
+  name: "Al Amin",
+  get name() {
+    return this.name;
+  },
+};
+personWrong.name;
