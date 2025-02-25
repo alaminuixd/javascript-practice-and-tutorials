@@ -18,3 +18,17 @@ function countdownPos(n) {
   countdownPos(n + 1); // Recursive call is the last action
 }
 countdownPos(0);
+
+function count() {
+  let num = 0;
+  function inner() {
+    if (num < 10) {
+      console.log(num);
+      num += 1;
+      inner();
+    }
+  }
+  return inner;
+}
+let res1 = count();
+res1();

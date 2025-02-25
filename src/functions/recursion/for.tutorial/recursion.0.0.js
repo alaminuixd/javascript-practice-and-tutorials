@@ -1,3 +1,12 @@
+function recur(n = 0) {
+  if (n < 3) {
+    //*important if we don't return this "n" in function parameter will never get updated.
+    return recur(n + 1);
+  }
+  return n;
+}
+console.log(recur()); // result: 3;
+
 // count1: Using recursive calls with an argument passed in the function.
 function count1(n) {
   if (n > 3) return; // Base case: Stop when n > 3
