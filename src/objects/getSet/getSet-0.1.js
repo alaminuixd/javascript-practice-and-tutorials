@@ -10,7 +10,7 @@ const person = {
   pName: "",
 };
 
-// 2) "accessor" properties are "methods" to "get" and "set" the property of an object. These properties are made with "get" and "set"
+// 2) "accessor" properties are "methods" to "get" and "set" the property of an object. These properties start with "get" and "set"
 const person2 = {
   // Data property
   pName: "",
